@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".EditarDorama">
+
+    <TextView
+        android:id="@+id/labelTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Título"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <TextView
+        android:id="@+id/labelNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Nota"
+        app:layout_constraintTop_toBottomOf="@+id/edtTitulo"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <TextView
+        android:id="@+id/labelAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ano de Lançamento"
+        app:layout_constraintTop_toBottomOf="@+id/edtNota"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <TextView
+        android:id="@+id/labelPais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pais de Origem"
+        app:layout_constraintTop_toBottomOf="@+id/edtAno"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <TextView
+        android:id="@+id/labelEpisodios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Total de Episódios"
+        app:layout_constraintTop_toBottomOf="@+id/edtPais"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <EditText
+        android:id="@+id/edtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="Digite o título aqui"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/labelTitulo"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <EditText
+        android:id="@+id/edtNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="0.0"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelNota" />
+
+    <EditText
+        android:id="@+id/edtAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="AAAA"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/labelAno"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <EditText
+        android:id="@+id/edtPais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="digite o pais de origem"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/labelPais"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <EditText
+        android:id="@+id/edtEpisodios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="00"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/labelEpisodios"
+        tools:layout_editor_absoluteX="44dp" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:onClick="alterarDorama"
+        android:text="Salvar"
+        app:layout_constraintEnd_toStartOf="@+id/btnExcluir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEpisodios" />
+
+    <Button
+        android:id="@+id/btnExcluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="excluirDorama"
+        android:text="Excluir"
+        app:layout_constraintEnd_toStartOf="@id/btnCancelar"
+        app:layout_constraintStart_toEndOf="@id/btnSalvar"
+        app:layout_constraintTop_toBottomOf="@+id/edtEpisodios" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="cancelar"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnExcluir"
+        app:layout_constraintTop_toBottomOf="@+id/edtEpisodios" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
